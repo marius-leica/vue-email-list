@@ -16,7 +16,7 @@ const app = new Vue({
     checkMailsListLength() {
       if (this.listaMails.length === 10) {
         alert(
-          "Read them carrefuly becouse in 5 secconds everithing will be deleted"
+          "Read them carrefuly becouse in 10 secconds everithing will be deleted"
         );
       }
     },
@@ -33,7 +33,7 @@ const app = new Vue({
       }
       setTimeout(() => {
         this.listaMails = [];
-      }, 5000);
+      }, 10000);
     },
   },
 });
