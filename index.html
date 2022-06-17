@@ -18,12 +18,32 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.14/vue.js'
         integrity='sha512-pSyYzOKCLD2xoGM1GwkeHbdXgMRVsSqQaaUoHskx/HF09POwvow2VfVEdARIYwdeFLbu+2FCOTRYuiyeGxXkEg=='
         crossorigin='anonymous'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div id="app">
+        <div class="container mt-5" style="border:10px red dashed">
+            <h1 class="text-center mt-3 text-danger display-1">THIS INFORMATIONS <br> ARE TOP SECRET</h1>
+            <h4 class="text-danger text-center py-5">TOP-LEVEL CLEARANCY REQUARED</h4>
+            <div class="my-5 d-flex justify-content-around align-items-center">
+                <div>
+                    <h2>Bond, James
+                    </h2>
+                    <h2>Status: 007</h2><button class="btn btn-danger" @click="getRandomMail">Create Alias</button>
+                </div>
+                <div>
+                    <img src="http://img4.wikia.nocookie.net/__cb20130506224950/jamesbond/images/8/81/James_Bond_(Daniel_Craig)_-_Profile.jpg"
+                        alt="bond foto">
+                </div>
+            </div>
 
+            <h3 class="text-center mb-3">This are your 10 alias for your next mission:</h3>
+            <ul class="list-group mx-5">
+                <li class="list-group-item text-center" v-for="alias in listaMails">{{alias}}</li>
+            </ul>
+        </div>
     </div>
     <script src="main.js"></script>
 </body>
