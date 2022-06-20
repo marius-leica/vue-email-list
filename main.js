@@ -18,6 +18,9 @@ const app = new Vue({
         alert(
           "Read them carrefuly becouse in 10 secconds everithing will be deleted"
         );
+        setTimeout(() => {
+          this.listaMails = [];
+        }, 10000);
       }
     },
     getRandomMail() {
@@ -31,9 +34,6 @@ const app = new Vue({
           console.log(axiosResp.data.response);
         });
       }
-      setTimeout(() => {
-        this.listaMails = [];
-      }, 10000);
     },
   },
 });
